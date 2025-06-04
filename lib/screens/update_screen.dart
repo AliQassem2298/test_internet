@@ -30,6 +30,8 @@ class _UpdateScreenState extends State<UpdateScreen> {
     try {
       final resp = await Dio().get(
           'https://raw.githubusercontent.com/AliQassem2298/test_internet/refs/heads/master/docs/update.json');
+      // https://github.com/AliQassem2298/test_internet/blob/b30146bdb10ef5a02c284e27ed2f9cf613b2feb2/docs/update.
+      // https://raw.githubusercontent.com/AliQassem2298/test_internet/b30146bdb10ef5a02c284e27ed2f9cf613b2feb2/docs/update.json
 
       // إذا أرجعنا String، حوله إلى Map عبر jsonDecode:
       final Map<String, dynamic> jsonData =
