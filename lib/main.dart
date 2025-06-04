@@ -47,7 +47,7 @@ https://www.mediafire.com/file/lyrz5br1adkbj5j/update.json/file
       debugShowCheckedModeBanner: false,
       title: 'Number 1',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
       // if you out Column for examole in the Home Page
@@ -57,7 +57,7 @@ https://www.mediafire.com/file/lyrz5br1adkbj5j/update.json/file
       // for the flutter_screenutil package
       // h for the height , r for the radios (circle...) , sp for the font size , w for the width
       // if you have padding for (all) use the r because it is like radius
-      home: const MyHomePage(title: 'I love ali (Update)'),
+      home: const MyHomePage(title: 'I hate flutter.'),
     );
   }
 }
@@ -90,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<void> _checkForUpdate() async {
     try {
       final resp = await Dio().get(
-          'https://raw.githubusercontent.com/AliQassem2298/my_flutter_app_update/refs/heads/master/docs/update.json');
+          'https://raw.githubusercontent.com/AliQassem2298/test_internet/refs/heads/master/docs/update.json');
       final body =
           resp.data is String ? resp.data as String : jsonEncode(resp.data);
       final json = jsonDecode(body) as Map<String, dynamic>;
